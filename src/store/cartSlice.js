@@ -28,11 +28,11 @@ const cartSlice = createSlice({
 
       const existingItem = state.items.find((item) => item.id === id);
 
-      existingItem.quantity--;
+      state.totalQuantity--;
       if (existingItem.quantity === 1) {
         state.items = state.items.filter((item) => item.id !== id);
       } else {
-        state.totalQuantity--;
+        existingItem.quantity--;
       }
     },
   },
