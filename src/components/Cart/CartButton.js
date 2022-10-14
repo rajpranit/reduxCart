@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
 
 const CartButton = (props) => {
-  const cartItem = useSelector((state) => state.cart.items.length);
+  const cartItem = useSelector((state) => state.cart.totalQuantity);
   const dispatch = useDispatch();
 
   const cartToggleHandler = () => {

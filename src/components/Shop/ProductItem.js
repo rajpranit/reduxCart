@@ -5,13 +5,14 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
 
 const ProductItem = (props) => {
-  const { title, price, description } = props;
+  const { id, title, price, description } = props;
 
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
     dispatch(
       cartActions.addToCart({
+        id,
         title,
         price,
         description,
