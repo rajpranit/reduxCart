@@ -12,6 +12,7 @@ const CartItem = (props) => {
     dispatch(
       cartActions.addToCart({
         id: id,
+        total: total,
       })
     );
   };
